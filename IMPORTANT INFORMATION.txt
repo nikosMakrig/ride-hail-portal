@@ -1,0 +1,39 @@
+Instalation Instructions
+
+------Server-------
+folder-> hail-app-server
+1) in root folder run yarn or npm install
+2) node server.js (to start server)
+
+the config for the database is
+  host : "localhost",
+  user : "root",
+  password : "root",
+  database : "survey",
+  dialect: "mysql",
+  port: 3306,
+  PORT:8080
+
+and is located in db.config.js file
+
+
+-------Portal--------
+folder -> hail-app-portal
+1) in root folder run yarn or npm install
+2) yarn start
+
+
+Usefull information (a few words about the app)
+The app has two main views
+1) Simple survey
+2) More complex survey for selected users
+
+Also there is a button on the top left of the screen, 
+this is for demo purposes only as it emulates the two diferrent surveys a user can receive.
+
+Form builder
+Since the servey can change often and anytime, i have created a form builder component in the client side.
+This components gets feeded by a mock json, which can be easily replaced by a api call regarding the company's needs.
+So with a backoffice tool , one can create a survey dynamic and then visualize that on the actual survey.
+
+The actual data of the survey get saved as a json because they are dynamic and the number of columns could not be static. 
